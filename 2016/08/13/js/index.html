@@ -1,0 +1,646 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="生活感悟," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="1，首先下载git:
+https://git-scm.com/download/win默认安装即可。安装后在桌面右键会有 Git Bash Here
+
+2，安装hexo 这是官方中文文档https://hexo.io/zh- cn/docs/
+在桌面右键 Git Bash Here 打开命令模式：npm install –g hexo
+
+3，在任意盘创建文件夹（你喜欢的都可以：C/D/E/F/G）">
+<meta property="og:type" content="article">
+<meta property="og:title" content="搭建hexo博客指南">
+<meta property="og:url" content="http://lovexiaofeng.cn/2016/08/13/js/index.html">
+<meta property="og:site_name" content="小辉's Blog">
+<meta property="og:description" content="1，首先下载git:
+https://git-scm.com/download/win默认安装即可。安装后在桌面右键会有 Git Bash Here
+
+2，安装hexo 这是官方中文文档https://hexo.io/zh- cn/docs/
+在桌面右键 Git Bash Here 打开命令模式：npm install –g hexo
+
+3，在任意盘创建文件夹（你喜欢的都可以：C/D/E/F/G）">
+<meta property="og:updated_time" content="2016-08-15T15:38:58.655Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="搭建hexo博客指南">
+<meta name="twitter:description" content="1，首先下载git:
+https://git-scm.com/download/win默认安装即可。安装后在桌面右键会有 Git Bash Here
+
+2，安装hexo 这是官方中文文档https://hexo.io/zh- cn/docs/
+在桌面右键 Git Bash Here 打开命令模式：npm install –g hexo
+
+3，在任意盘创建文件夹（你喜欢的都可以：C/D/E/F/G）">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://lovexiaofeng.cn/2016/08/13/js/"/>
+
+  <title> 搭建hexo博客指南 | 小辉's Blog </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">小辉's Blog</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">这场游戏永远不会停止，直到我赢</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404.html" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
+            
+            公益404
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                搭建hexo博客指南
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-08-13T23:21:25+08:00" content="2016-08-13">
+              2016-08-13
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="1，首先下载git"><a href="#1，首先下载git" class="headerlink" title="1，首先下载git:"></a>1，首先下载git:</h3><blockquote>
+<p><a href="https://git-scm.com/download/win" target="_blank" rel="external">https://git-scm.com/download/win</a><br>默认安装即可。<br>安装后在桌面右键会有 Git Bash Here</p>
+</blockquote>
+<h3 id="2，安装hexo-这是官方中文文档https-hexo-io-zh-cn-docs"><a href="#2，安装hexo-这是官方中文文档https-hexo-io-zh-cn-docs" class="headerlink" title="2，安装hexo 这是官方中文文档https://hexo.io/zh- cn/docs/"></a>2，安装hexo 这是官方中文文档<a href="https://hexo.io/zh-" target="_blank" rel="external">https://hexo.io/zh-</a> cn/docs/</h3><blockquote>
+<p>在桌面右键 Git Bash Here 打开命令模式：<br>npm install –g hexo</p>
+</blockquote>
+<h3 id="3，在任意盘创建文件夹（你喜欢的都可以：C-D-E-F-G）命名为hexo（其实什么都可以的）"><a href="#3，在任意盘创建文件夹（你喜欢的都可以：C-D-E-F-G）命名为hexo（其实什么都可以的）" class="headerlink" title="3，在任意盘创建文件夹（你喜欢的都可以：C/D/E/F/G）命名为hexo（其实什么都可以的）"></a>3，在任意盘创建文件夹（你喜欢的都可以：C/D/E/F/G）命名为hexo（其实什么都可以的）</h3><blockquote>
+<p>进入到你所建文件的目录，记住是你刚创建的命名是什么我就不知道了，我的是hexo，鼠标右键Git Bash 也会出现命令模式</p>
+</blockquote>
+<h3 id="4，生成文件："><a href="#4，生成文件：" class="headerlink" title="4，生成文件："></a>4，生成文件：</h3><blockquote>
+<p>hexo init<br>安装依赖包：<br>nmp install</p>
+</blockquote>
+<h3 id="5-上述命令成功完成后，可以看见hexo目录下新建了好多的文件，文件夹的。"><a href="#5-上述命令成功完成后，可以看见hexo目录下新建了好多的文件，文件夹的。" class="headerlink" title="5,上述命令成功完成后，可以看见hexo目录下新建了好多的文件，文件夹的。"></a>5,上述命令成功完成后，可以看见hexo目录下新建了好多的文件，文件夹的。</h3><blockquote>
+<p>启动服务：<br>hexo generate(其实 hexo g 效果是一样一样的)<br>hexo server<br>OK，本地静态博客已经搞定了，不信你在浏览器输入localhost:4000看看效果，是不是吓着你了，哈哈！</p>
+</blockquote>
+<h3 id="6，然后就是把博客部署到GitHub上，（至于为什么要选择GitHub，毕竟人家牛逼，关键又不要钱，也不限流量，问什么不呢？）"><a href="#6，然后就是把博客部署到GitHub上，（至于为什么要选择GitHub，毕竟人家牛逼，关键又不要钱，也不限流量，问什么不呢？）" class="headerlink" title="6，然后就是把博客部署到GitHub上，（至于为什么要选择GitHub，毕竟人家牛逼，关键又不要钱，也不限流量，问什么不呢？）"></a>6，然后就是把博客部署到GitHub上，（至于为什么要选择GitHub，毕竟人家牛逼，关键又不要钱，也不限流量，问什么不呢？）</h3><h3 id="7，关于注册GitHub上创建账号就不多说了，作为一计算机专业，不会这，感觉好丢人的。"><a href="#7，关于注册GitHub上创建账号就不多说了，作为一计算机专业，不会这，感觉好丢人的。" class="headerlink" title="7，关于注册GitHub上创建账号就不多说了，作为一计算机专业，不会这，感觉好丢人的。"></a>7，关于注册GitHub上创建账号就不多说了，作为一计算机专业，不会这，感觉好丢人的。</h3><h3 id="8-创建repository（在右下角）"><a href="#8-创建repository（在右下角）" class="headerlink" title="8,创建repository（在右下角）"></a>8,创建repository（在右下角）</h3><h3 id="9-创建一个repository，这里的话就是重点了，一定要是你GitHub名格式："><a href="#9-创建一个repository，这里的话就是重点了，一定要是你GitHub名格式：" class="headerlink" title="9,创建一个repository，这里的话就是重点了，一定要是你GitHub名格式："></a>9,创建一个repository，这里的话就是重点了，一定要是你GitHub名格式：</h3><blockquote>
+<p>你的名.github.io  明白？</p>
+</blockquote>
+<h3 id="10，将本地的静态部署到GitHub上，进入你刚在什么盘创建的什么目录（我真的不知道），有一个-config-yml的可编译文件，想怎么打开就怎么打开，打开就可以，修改下面几个地方："><a href="#10，将本地的静态部署到GitHub上，进入你刚在什么盘创建的什么目录（我真的不知道），有一个-config-yml的可编译文件，想怎么打开就怎么打开，打开就可以，修改下面几个地方：" class="headerlink" title="10，将本地的静态部署到GitHub上，进入你刚在什么盘创建的什么目录（我真的不知道），有一个_config.yml的可编译文件，想怎么打开就怎么打开，打开就可以，修改下面几个地方："></a>10，将本地的静态部署到GitHub上，进入你刚在什么盘创建的什么目录（我真的不知道），有一个_config.yml的可编译文件，想怎么打开就怎么打开，打开就可以，修改下面几个地方：</h3><blockquote>
+<p>deploy:<br> type: git<br> repository: git@github.com:xiaofengtongxue/xiaofengtongxue.github.io.git<br> branch: master<br>值得注意的是，每一个： 都有一个空格的。</p>
+</blockquote>
+<h3 id="11，然后就是完成部署：（依旧是刚才你创建的什么文件夹下）"><a href="#11，然后就是完成部署：（依旧是刚才你创建的什么文件夹下）" class="headerlink" title="11，然后就是完成部署：（依旧是刚才你创建的什么文件夹下）"></a>11，然后就是完成部署：（依旧是刚才你创建的什么文件夹下）</h3><blockquote>
+<p>hexo g<br>hexo d<br>OK,基本搞定了，第一次需要点时间，然后在浏览器访问你的：你的名字/你的名字.github.io<br>看看有没有效果，是不是傻了你。</p>
+</blockquote>
+<h3 id="12，后续的优化再说吧，域名的绑定也很简单的，现在买个域名挺便宜的，十块钱左右，写个文件，做个DNS解析就可以的。"><a href="#12，后续的优化再说吧，域名的绑定也很简单的，现在买个域名挺便宜的，十块钱左右，写个文件，做个DNS解析就可以的。" class="headerlink" title="12，后续的优化再说吧，域名的绑定也很简单的，现在买个域名挺便宜的，十块钱左右，写个文件，做个DNS解析就可以的。"></a>12，后续的优化再说吧，域名的绑定也很简单的，现在买个域名挺便宜的，十块钱左右，写个文件，做个DNS解析就可以的。</h3><blockquote>
+<p>OK，巴拉完了。</p>
+</blockquote>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/生活感悟/" rel="tag">#生活感悟</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/08/14/前端/" rel="prev" title="前端性能优化">
+                前端性能优化 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="Hardy" />
+          <p class="site-author-name" itemprop="name">Hardy</p>
+          <p class="site-description motion-element" itemprop="description">沉默，可以让混乱的心，变得清澈。</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">7</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1，首先下载git"><span class="nav-number">1.</span> <span class="nav-text">1，首先下载git:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2，安装hexo-这是官方中文文档https-hexo-io-zh-cn-docs"><span class="nav-number">2.</span> <span class="nav-text">2，安装hexo 这是官方中文文档https://hexo.io/zh- cn/docs/</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3，在任意盘创建文件夹（你喜欢的都可以：C-D-E-F-G）命名为hexo（其实什么都可以的）"><span class="nav-number">3.</span> <span class="nav-text">3，在任意盘创建文件夹（你喜欢的都可以：C/D/E/F/G）命名为hexo（其实什么都可以的）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4，生成文件："><span class="nav-number">4.</span> <span class="nav-text">4，生成文件：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-上述命令成功完成后，可以看见hexo目录下新建了好多的文件，文件夹的。"><span class="nav-number">5.</span> <span class="nav-text">5,上述命令成功完成后，可以看见hexo目录下新建了好多的文件，文件夹的。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6，然后就是把博客部署到GitHub上，（至于为什么要选择GitHub，毕竟人家牛逼，关键又不要钱，也不限流量，问什么不呢？）"><span class="nav-number">6.</span> <span class="nav-text">6，然后就是把博客部署到GitHub上，（至于为什么要选择GitHub，毕竟人家牛逼，关键又不要钱，也不限流量，问什么不呢？）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7，关于注册GitHub上创建账号就不多说了，作为一计算机专业，不会这，感觉好丢人的。"><span class="nav-number">7.</span> <span class="nav-text">7，关于注册GitHub上创建账号就不多说了，作为一计算机专业，不会这，感觉好丢人的。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-创建repository（在右下角）"><span class="nav-number">8.</span> <span class="nav-text">8,创建repository（在右下角）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-创建一个repository，这里的话就是重点了，一定要是你GitHub名格式："><span class="nav-number">9.</span> <span class="nav-text">9,创建一个repository，这里的话就是重点了，一定要是你GitHub名格式：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10，将本地的静态部署到GitHub上，进入你刚在什么盘创建的什么目录（我真的不知道），有一个-config-yml的可编译文件，想怎么打开就怎么打开，打开就可以，修改下面几个地方："><span class="nav-number">10.</span> <span class="nav-text">10，将本地的静态部署到GitHub上，进入你刚在什么盘创建的什么目录（我真的不知道），有一个_config.yml的可编译文件，想怎么打开就怎么打开，打开就可以，修改下面几个地方：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11，然后就是完成部署：（依旧是刚才你创建的什么文件夹下）"><span class="nav-number">11.</span> <span class="nav-text">11，然后就是完成部署：（依旧是刚才你创建的什么文件夹下）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#12，后续的优化再说吧，域名的绑定也很简单的，现在买个域名挺便宜的，十块钱左右，写个文件，做个DNS解析就可以的。"><span class="nav-number">12.</span> <span class="nav-text">12，后续的优化再说吧，域名的绑定也很简单的，现在买个域名挺便宜的，十块钱左右，写个文件，做个DNS解析就可以的。</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Hardy</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+<script type="text/javascript" async src="//push.zhanzhang.baidu.com/push.js">
+</script>
+
+
+</body>
+</html>
